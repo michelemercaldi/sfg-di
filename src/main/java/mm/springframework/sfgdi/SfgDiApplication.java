@@ -2,7 +2,7 @@ package mm.springframework.sfgdi;
 
 import mm.springframework.sfgdi.controllers.ConstructorInjectController;
 import mm.springframework.sfgdi.controllers.MyController;
-import mm.springframework.sfgdi.controllers.PropetyInjectedController;
+import mm.springframework.sfgdi.controllers.PropertyInjectedController;
 import mm.springframework.sfgdi.controllers.SetterInjectController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,8 +22,8 @@ public class SfgDiApplication {
 		System.out.println(greeting);
 
 		System.out.println("------------ Property");
-		PropetyInjectedController propetyInjectedController = (PropetyInjectedController) ctx.getBean("propetyInjectedController");
-		System.out.println(propetyInjectedController.getGreeting());
+		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
+		System.out.println(propertyInjectedController.getGreeting());
 
 		System.out.println("------------ Setter");
 		SetterInjectController setterInjectController = (SetterInjectController) ctx.getBean("setterInjectController");

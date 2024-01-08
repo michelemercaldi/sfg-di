@@ -1,10 +1,8 @@
 package mm.springframework.sfgdi.controllers;
 
-import mm.springframework.sfgdi.services.GreetingServiceImpl;
+import mm.springframework.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectControllerTest {
 
@@ -12,7 +10,7 @@ class SetterInjectControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new ConstructorGreetingService());
     }
 
     @Test
