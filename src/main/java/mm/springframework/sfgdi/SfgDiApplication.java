@@ -1,9 +1,6 @@
 package mm.springframework.sfgdi;
 
-import mm.springframework.sfgdi.controllers.ConstructorInjectController;
-import mm.springframework.sfgdi.controllers.MyController;
-import mm.springframework.sfgdi.controllers.PropertyInjectedController;
-import mm.springframework.sfgdi.controllers.SetterInjectController;
+import mm.springframework.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,6 +10,11 @@ public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nProfileController i18nProfileController = (I18nProfileController) ctx.getBean("i18nProfileController");
+
+		System.out.println("------------ Profiles");
+		System.out.println(i18nProfileController.sayHello());
 
 		// DI: I'm not creating object, I'm asking to the framework to create it for me
 		// note: by default the name is the class name with the first letter lower case
