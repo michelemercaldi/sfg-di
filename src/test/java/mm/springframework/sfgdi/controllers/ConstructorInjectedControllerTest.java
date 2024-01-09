@@ -4,13 +4,13 @@ import mm.springframework.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class ConstructorInjectControllerTest {
+class ConstructorInjectedControllerTest {
 
-    ConstructorInjectController controller;
+    ConstructorInjectedController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectController(new ConstructorGreetingService());
+        controller = new ConstructorInjectedController(new ConstructorGreetingService());
     }
 
     @Test

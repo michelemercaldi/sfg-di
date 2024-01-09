@@ -33,12 +33,12 @@ public class SfgDiApplication {
 		System.out.println(propertyInjectedController.getGreeting());
 
 		System.out.println("------------ Setter");
-		SetterInjectController setterInjectController = (SetterInjectController) ctx.getBean("setterInjectController");
-		System.out.println(setterInjectController.getGreeting());
+		SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
+		System.out.println(setterInjectedController.getGreeting());
 
 		System.out.println("------------ Constructor");
-		ConstructorInjectController constructorInjectController = (ConstructorInjectController) ctx.getBean("constructorInjectController");
-		System.out.println(constructorInjectController.getGreeting());
+		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
+		System.out.println(constructorInjectedController.getGreeting());
 	}
 
 }
