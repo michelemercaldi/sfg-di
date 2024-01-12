@@ -1,0 +1,4 @@
+mm:
+  username: YmlSuperuserQA
+  password: YmlDbPasswordQA
+  jdbcurl: YmlSomeUrlforDBQA
