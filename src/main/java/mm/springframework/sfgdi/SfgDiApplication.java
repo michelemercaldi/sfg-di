@@ -1,5 +1,6 @@
 package mm.springframework.sfgdi;
 
+import mm.springframework.sfgdi.config.SfgConfiguration;
 import mm.springframework.sfgdi.controllers.*;
 import mm.springframework.sfgdi.datasource.FakeDataSource;
 import mm.springframework.sfgdi.services.PrototypeBean;
@@ -62,8 +63,11 @@ public class SfgDiApplication {
 		System.out.println("Password from properties:    " + fakeDataSource.getPassword());
 		System.out.println("Jdbcurl from properties:    " + fakeDataSource.getJdbcurl());
 
-
-
+		System.out.println("------------ Config Props Bean");
+		SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
+		System.out.println(sfgConfiguration.getUsername());
+		System.out.println(sfgConfiguration.getPassword());
+		System.out.println(sfgConfiguration.getJdbcurl());
 
 
 		System.out.println("------------ end of main ------------");
