@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Created by jt on 2/27/21.
  */
-@ConfigurationProperties("mm")
 @Configuration
+@ConfigurationProperties("mm")
 public class SfgConfiguration {
     private String username;
     private String password;
